@@ -1,0 +1,184 @@
+/* hero */
+.hero-container {
+    height: 100vh; /* para que ocupe la altura de la pantalla  XD*/
+    min-height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    object-fit: cover; 
+    object-position: center;
+}
+
+.hero-content {
+    z-index: 2; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* sombra y contraste del texto pa que se lea*/
+}
+
+/* oscurecimiento de la imagen para que se pueda leer el texto */
+.hero-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+}
+
+
+/* el css que ya estaba anteriormente */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #2a2a2a;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Main Layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+/* Características */
+.caracteristicas {
+  flex: 2 1 600px;
+}
+
+.caracteristicas h2 {
+  margin-bottom: 1rem;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tarjeta {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1 1 250px;
+  border: 1px solid #e2e8f0;
+}
+
+.imagen-producto {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Aside - Testimonios */
+aside {
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  background-color: #f9fbfd;
+  padding: 1rem;
+  border-left: 5px solid #2563eb;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.rentar-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.rentar-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  header {
+    background-color: #2563eb;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  body {
+    background-color: #dbeafe;
+  }
+
+  footer {
+    background-color: #2563eb;
+
+  }
+}

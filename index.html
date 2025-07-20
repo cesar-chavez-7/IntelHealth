@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNTELHEALTH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+    <!-- Barra de navegacion inicia xd-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/img/dientito.png" alt="Logo" width="40"> INNTELHEALTH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="agenda.html">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="producto.html">Escaneres dentales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculadora.html">Riesgo Dental</a>
+                    </li>
+                </ul>
+                <!-- aqui hiria el bonton de modo oscurro creo-->
+            </div>
+        </div>
+    </nav>
+    <!--Barra de naveacion finaliza-->
+
+    <!-- hero inicia -->
+    <header class="hero-container position-relative">
+        <div class="hero-image">
+            <img src="/img/hero_home.png" alt="Fondo dental" class="img-fluid w-100 h-100">
+        </div>
+        <div class="hero-content position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
+            <div class="container text-center text-white">
+                <h1 class="display-4 fw-bold">Tu sonrisa es nuestra prioridad</h1>
+                <p class="lead display-7">Cuidado dental experto con tecnología de punta</p>
+                <a href="servicios.html" class="btn btn-primary btn-lg mt-3">Nuestros Servicios</a>
+            </div>
+        </div>
+    </header>
+    <!--hero finaliza-->
+
+    <!-- seccion de servicios destacados -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="" alt="" class="img-fluid w-100">
+                            <h5 class="card-title py-4">Consulta virtual</h5>
+                            <p class="card-text">Describe tus sintomas y mira lo que te sucede.</p>
+                            <a href="servicios.html" class="btn btn-primary">Más info</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- se repite el codigo de la card para agregar otros productos -->
+            </div>
+        </div>
+    </section>
+    <!--seccion de servvicios destacados finaliza-->
+
+    <!-- comentarios inicia-->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Déjanos tu opinión</h2>
+            <form id="comentarioForm">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="comentario" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+    <!--comentarios finaliza-->
+
+    <!-- footer inicia-->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div>
+                <div class="text-center">
+                    <h5>INNTELHEALTH</h5>
+                    <p>© 2023 Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer finaliza-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
