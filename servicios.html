@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>InnTelHealth Dental Digital</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/calculadora.css">
   <style>
     .hero {
       background: linear-gradient(135deg, #0d6efd, #66b3ff);
@@ -27,29 +28,63 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-      <a class="navbar-brand" href="#">Clínica Dental Digital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
+    <!-- Barra de navegacion inicia xd-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/img/dientito.png" alt="Logo" width="40"> INNTELHEALTH
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" target="_blank"  href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"  href="agenda.html">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"  href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"  href="producto.html">Escaneres dentales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank"  href="calculadora.html">Riesgo Dental</a>
+                    </li>
+                </ul>
+        <label class="mini-toggle">
+                <input class='toggle-checkbox' type='checkbox'></input>
+                <div class='toggle-slot'>
+                    <div class='sun-icon-wrapper'>
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                    </div>
+                    <div class='toggle-button'></div>
+                    <div class='moon-icon-wrapper'>
+                    <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                    </div>
+                </div>
+        </label>
+            </div>
+        </div>
+    </nav>
+    <!--Barra de naveacion finaliza-->
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <h1 class="display-4">¡Transforma tu sonrisa hoy!</h1>
+      <h1 class="display-4 mt-5">¡Transforma tu sonrisa hoy!</h1>
       <p class="lead">Tecnología avanzada, atención personalizada y resultados sorprendentes.</p>
-      <a href="https://wa.me/573118583072" class="btn btn-light btn-lg mt-3">Agendar por WhatsApp</a>
+      <a href="https://wa.me/573118583072" class="btn btn-light btn-lg mt-3 text-black">Agendar por WhatsApp</a>
     </div>
   </section>
 
   <!-- Servicios -->
-  <div class="container">
+  <div class="container mt-5">
     <h2 class="section-title">Nuestros Servicios</h2>
-    <div class="row g-4">
+    <div class="row g-4 mt-3">
 
       <!-- Escáner intraoral -->
       <div class="col-md-4">
@@ -102,5 +137,7 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
 </body>
 </html>
