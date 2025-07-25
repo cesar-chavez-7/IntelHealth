@@ -1,47 +1,200 @@
- .hero {
-      background: linear-gradient(135deg, #0d6efd, #66b3ff);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .section-title {
-      text-align: center;
-      margin: 6s0px 0 30px;
-    }
-    footer {
-      background-color: #0d6efd;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 60px;
-    }
+/*  Definición de la Paleta de Colores con Variables */
+:root {
+  /* Paleta Principal */
+  --color-primary: #2563EB; 
+  --color-accent: #14B8A6;   
+  --color-whatsapp: #25D366; /* WhatsApp Green */
+
+  /* Variables para Modo Claro (por defecto) */
+  --color-bg: #F8F9FA;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border: #E5E7EB;
+  --color-link: var(--color-primary);
+  --color-hero-text: #FFFFFF;
+  --logo-filter: none;
+}
+
+/*  Variables para Modo Oscuro */
+body.dark-mode {
+  --color-bg: #111827;
+  --color-surface: #1F2937;
+  --color-text-primary: #F3F4F6;
+  --color-text-secondary: #9CA3AF;
+  --color-border: #374151;
+  --color-link: #93c5fd; /* Un azul claro accesible para enlaces */
+  --logo-filter: invert(1) hue-rotate(180deg);
+}
+
+/*  Estilos Globales y de Base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  padding-top: 70px; /* Evita que el contenido se oculte debajo del navbar fijo */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    border-radius: 50%;
-    padding: 12px;
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.3s ease;
-  }
 
-  .whatsapp-float:hover {
+/* Barra de Navegación */
+.navbar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  color: var(--color-text-secondary) !important;
+}
+
+.nav-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+}
+
+.navbar-brand {
+    color: var(--color-text-primary) !important;
+}
+
+.lgo {
+  filter: var(--logo-filter);
+  transition: filter 0.3s ease;
+}
+
+/* Cards */
+.card {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: var(--color-primary);
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: var(--color-text-primary);
+  color: var(--color-bg);
+  text-align: center;
+}
+
+/*  Estilos Específicos de la Página */
+
+/* Hero Section */
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-hero-text);
+  padding: 5rem 1rem;
+  text-align: center;
+  margin-top: -70px; 
+}
+
+/* Título de Sección */
+.section-title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-text-primary);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* Lista dentro de las cards */
+.card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.card ul li {
+  padding-left: 1.5em;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Botones */
+.btn-success {
+    background-color: var(--color-accent) !important;
+    border-color: var(--color-accent) !important;
+}
+
+.btn-success:hover {
+    opacity: 0.9;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--color-whatsapp);
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-float:hover {
     transform: scale(1.1);
-  }
+}
 
-  .whatsapp-float img {
-    width: 36px;
-    height: 36px;
-    display: block;
-  }
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
 
-  @media (max-width: 600px) {
-    .whatsapp-float {
-      bottom: 15px;
-      right: 15px;
-    }
-  }
+/* 6. Toggle Switch (Modo Light/Dark) */
+.mini-toggle { display: inline-block; position: relative; width: 4em; height: 2em; }
+.toggle-checkbox { position: absolute; opacity: 0; cursor: pointer; height: 100%; width: 100%; z-index: 2; }
+.toggle-slot { position: relative; width: 100%; height: 100%; border: 2px solid var(--color-border); border-radius: 10em; background-color: var(--color-surface); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); transition: background-color 250ms; overflow: hidden; }
+.toggle-checkbox:checked ~ .toggle-slot { background-color: #374151; }
+.toggle-button { position: absolute; top: 0.3em; left: 2.1em; width: 1.2em; height: 1.2em; border-radius: 50%; background-color: #ffeccf; box-shadow: inset 0 0 0 0.2em #ffbb52; transition: background-color 250ms, border-color 250ms, transform 400ms cubic-bezier(.26,2,.46,.71); transform: translateX(0); }
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button { background-color: #485367; box-shadow: inset 0 0 0 0.2em white; transform: translateX(-1.7em); }
+.sun-icon, .moon-icon { width: 1.2em; height: 1.2em; }
+.sun-icon-wrapper, .moon-icon-wrapper { position: absolute; top: 0.1em; width: 1.5em; height: 1.5em; transition: opacity 150ms, transform 400ms cubic-bezier(.26,2,.46,.71); transform-origin: 50% 50%; pointer-events: none; }
+.sun-icon { color: #ffbb52; }
+.moon-icon { color: white; }
+.sun-icon-wrapper { left: 0.3em; opacity: 1; transform: rotate(15deg); }
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper { opacity: 0; transform: translateX(0.5em) rotate(0deg); }
+.moon-icon-wrapper { right: 0.3em; top: -0.01em; opacity: 0; transform: rotate(0deg); }
+.toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper { opacity: 1; transform: rotate(-15deg); }
