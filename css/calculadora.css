@@ -64,6 +64,10 @@ body.dark-mode footer {
 body.dark-mode .card-subtitle {
   color: #e5e7eb !important;
 }
+body.dark-mode .lgo {
+  filter: invert(1) hue-rotate(180deg);
+}
+
 
 /* Header */
 header {
