@@ -68,14 +68,14 @@
 
     // === FORMULARIO DE EVALUACIÓN DENTAL ===
     const dentalForm = document.getElementById("dentalForm");
-
+    
     if (dentalForm) {
       dentalForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
         const form = e.target;
         let score = 0;
-
+// obtener valores del usuario
         score += parseInt(form.cepillado.value) === 0 ? 2 : parseInt(form.cepillado.value) === 1 ? 1 : 0;
         score += parseInt(form.azucar.value);
         score += parseInt(form.dentista.value);
@@ -86,7 +86,8 @@
         let message = '';
         let icon = '';
         let recommendation = '';
-
+// la suma de los valores obtenidos, dependiendo del total sale una ventana emergente que da el resultado del test. Además, en esta
+//ventana está un botón que te direge a la ventana de servicios
         if (score >= 8) {
           title = "🔴 Riesgo ALTO";
           message = "Necesitas mejorar tus hábitos de higiene oral.";
@@ -103,7 +104,7 @@
           icon = "success";
           recommendation = "Sigue con tus buenos hábitos y realiza chequeos regulares.";
         }
-
+// código de la ventana emergente con sus botones de Agendar cita y cerrar.
         Swal.fire({
           title: title,
           html: `
